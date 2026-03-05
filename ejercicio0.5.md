@@ -1,6 +1,3 @@
-#### Contenido para `ejercicio0.5.md`
-
-```markdown
 # Ejercicio 0.5: Diagrama de SPA
 
 ```mermaid
@@ -23,9 +20,11 @@ sequenceDiagram
     server-->>browser: spa.js
     deactivate server
 
+    Note right of browser: El JS solicita los datos JSON
+
     browser->>server: GET [https://studies.cs.helsinki.fi/exampleapp/data.json](https://studies.cs.helsinki.fi/exampleapp/data.json)
     activate server
     server-->>browser: [{ "content": "hola", "date": "2024-..." }, ... ]
     deactivate server
 
-    Note right of browser: El JS renderiza las notas dinámicamente
+    Note right of browser: El navegador renderiza las notas
